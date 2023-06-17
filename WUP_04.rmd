@@ -74,10 +74,58 @@ The average score on the WORDSUM test for graduates was a little over 10. There'
 
 
 
-
 ## Inferential Results
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
+
+
+```{r}
+model1 <- aov(WORDSUM~DEGREE,data=thedata)
+summary.aov(model1)
+```
+
+
+There is a significant difference between the schooling of all five degrees.
+
+
+```{r}
+# Example data
+thedata <- data.frame(
+  DEGREE = c('Bachelor', 'Master', 'PhD', 'Bachelor', 'Master', 'PhD'),
+  WORDSUM = c(20, 18, 22, 17, 19, 21)
+)
+
+# Perform one-way ANOVA
+model <- aov(WORDSUM ~ DEGREE, data = thedata)
+
+# Conduct post-hoc test (Tukey"s HSD)
+posthoc <- TukeyHSD(model)
+
+# Print the results
+print(posthoc)
+
+```
+
+
+
+
+```{r}
+
+
+# Perform one-way ANOVA
+model <- aov(WORDSUM ~ DEGREE, data = thedata)
+
+# Conduct post-hoc test (Tukey"s HSD)
+posthoc <- TukeyHSD(model)
+
+# Print the results
+print(posthoc)
+
+```
+
+
+Based on the chart, Lt high school and Graduate are the two degrees that are different from one another.We can also see high school is different than graduate.
+
 
 
 # Discussion and Conclusion
