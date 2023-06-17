@@ -88,26 +88,6 @@ summary.aov(model1)
 There is a significant difference between the schooling of all five degrees.
 
 
-```{r}
-# Example data
-thedata <- data.frame(
-  DEGREE = c('Bachelor', 'Master', 'PhD', 'Bachelor', 'Master', 'PhD'),
-  WORDSUM = c(20, 18, 22, 17, 19, 21)
-)
-
-# Perform one-way ANOVA
-model <- aov(WORDSUM ~ DEGREE, data = thedata)
-
-# Conduct post-hoc test (Tukey"s HSD)
-posthoc <- TukeyHSD(model)
-
-# Print the results
-print(posthoc)
-
-```
-
-
-
 
 ```{r}
 
@@ -131,3 +111,6 @@ Based on the chart, Lt high school and Graduate are the two degrees that are dif
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+
+We used chatgpt to help us get the box plots to see how each degree has the same or different schooling. We also used it for the inferential results and saw the averages which helped us determine just how different each degree is. We had some issues with chatgpt not wanting to give us the code we wanted at first but when we kept asking it more questions to give us the code we wanted, it did. 
