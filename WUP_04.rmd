@@ -56,9 +56,7 @@ ggtitle("Fancy Box PLot")
 ```
 
 
-
-
-
+We used chatGBT to get our box plot to help us visually see the data. LT high school does not overlap with Junior or Graduate college, therefore showing us it is very different schooling. Same goes with graduate not overlapping with high school, they have different schooling. While some overlap, others do not and that is how we can spot different schooling. 
 
 
 
